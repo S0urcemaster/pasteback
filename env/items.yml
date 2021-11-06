@@ -1,0 +1,39 @@
+- title: paths
+  items:
+  - title: terminal tool
+    content: cd /mnt/c/xampp/htdocs/terminal-tool
+    usage: 0
+- title: commands
+  items:
+  - title: seeder vehiclesBlocked
+    content: go run seed/Seeder.go allVehiclesBlocked
+    usage: 0
+- title: sql
+  items:
+  - title: alias
+    content: SELECT t1.name AS t1name FROM table1 AS t1 INNER JOIN table2 AS t2 ON
+      t1.id = t2.t1_id abcdefgh
+    usage: 0
+  - title: count
+    content: select count(id) from table
+    usage: 0
+  - title: select *
+    content: select * from
+    usage: 0
+  - title: select like
+    content: select * from table where column = '%b%'
+    usage: 0
+- title: regexp
+  items:
+  - title: all to the end
+    content: .*
+    usage: 0
+- title: markdown
+  items:
+  - title: table
+    content: |
+      | Item         | Price | # In stock |
+      |--------------|:-----:|-----------:|
+      | Juicy Apples |  1.99 |        739 |
+      | Bananas      |  1.89 |          6 |
+    usage: 0
