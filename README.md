@@ -1,45 +1,20 @@
-# terminal-tool
+# Pasteback
 
-terminal-tool fills the gap between most common terms used
-and rare terms used usually being searched online.
+With Pasteback you can store common terms and paste them back to clipboard
+when needed.
 
-There is one central spot to put every string you need into.
-If it's admin stuff like paths or commands or programmer stuff
-like build commands, sql or regex strings - if needed twice:
-paste it back.
+There is one central spot to put every string into you need.
+Either it's admin stuff like paths or commands or programmer's stuff
+like build commands, sql or regex strings - if needed more than once:
+paste it back.  
+You can even use it as a tiny wiki or a bookmark list. You can have 26x26
+entries per instance.
 
-Helper for the terminal.
+## Setup
+- Copy the executable to your home/pasteback directory.
+- Set an alias in .bashrc: `alias tt="/home/username/pasteback/pasteback"`.
+- Now you can call pasteback from anywhere with `tt`.
 
-- Pushes strings into clipboard.
-- Executes commands
-
-`[00] exit`  
-`[01] commands`     
-`[02] path`  
-`[__] 01`
-
-## Path Functions
-Since you cannot change the current shell's directory from a child process,
-instead when selecting an item from that menu, it's copied to the clipboard.
-
-`[00] exit`  
-`[01] cd /mnt/c`  
-`[02] cd /home/userx`  
-`[03] cd /what/ever`  
-
-You can then just paste it to the prompt.
-Set an item in `paths.txt` like that:  
-`cd /mnt/c`  
-
-(It can be any string, not only a path ofc.)
-
-## Commands Functions
-Commands can be executed, though.
-Set an item in `commands.txt` like this:  
-`[dir <directory>] <cmd name> <args>...`  
-The optional workdir of a command is set separately with the "dir" keyword
-(to avoid confusion with "cd").  
-Example:  
-`dir /mnt/c ls -l`
-
-Will print print a detailed list of `/mnt/c`'s contents.
+## Usage
+- type `tt` to start.
+- 
