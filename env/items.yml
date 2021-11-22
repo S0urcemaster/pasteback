@@ -1,12 +1,60 @@
 - title: paths
   items:
+  - title: gosrv
+    content: cd /mnt/c/xampp/htdocs/pinocchio/gosrv
+    usage: 32
+  - title: lux
+    content: cd /mnt/c/xampp/htdocs/pinocchio/lux2
+    usage: 19
+  - title: BigQuery
+    content: cd /mnt/c/xampp/htdocs/bigQuery
+    usage: 5
+  - title: wsl root
+    content: \\wsl$\Ubuntu-20.04
+    usage: 2
+  - title: pino test
+    content: cd /mnt/c/xampp/htdocs/pinocchio/test
+    usage: 1
   - title: terminal tool
     content: cd /mnt/c/xampp/htdocs/terminal-tool
-    usage: 0
+    usage: 1
 - title: commands
   items:
+  - title: GraphQL gen
+    content: go run -v github.com/99designs/gqlgen
+    usage: 18
+  - title: seeder cust search
+    content: go run seed/Seeder.go customerSearch
+    usage: 18
+  - title: DL logs
+    content: gcloud logging read 'timestamp<="2021-10-07T02:20:00Z" AND timestamp>="2021-10-07T02:00:00Z"'
+      >logs.txt
+    usage: 4
+  - title: Filt logs
+    content: go run readlogs.go >logs.filtered.txt && rm logs.txt
+    usage: 4
+  - title: seeder Geos
+    content: go run seed/Seeder.go Geos
+    usage: 1
+  - title: seeder full
+    content: go run seed/Seeder.go FullRebuild
+    usage: 1
   - title: seeder vehiclesBlocked
     content: go run seed/Seeder.go allVehiclesBlocked
+    usage: 1
+  - title: BQ createTables
+    content: go build maint/fb/createtables.go && ./createtables.exe
+    usage: 0
+  - title: BQ fin test li
+    content: go build -o funtest.exe maint/li/funtest.go && ./funtest
+    usage: 0
+  - title: BQ fun test fb
+    content: go build -o funtest.exe maint/fb/funtest.go && ./funtest
+    usage: 0
+- title: datetime
+  items:
+  - title: js now format
+    content: (new Date()).toLocaleString()
     usage: 0
 - title: sql
   items:
@@ -28,12 +76,64 @@
   - title: all to the end
     content: .*
     usage: 0
+  - title: lazy
+    content: .*?
+    usage: 0
 - title: markdown
   items:
+  - title: image
+    content: ![Alt](.jpg)
+    usage: 0
   - title: table
-    content: |
+    content: |-
       | Item         | Price | # In stock |
       |--------------|:-----:|-----------:|
       | Juicy Apples |  1.99 |        739 |
       | Bananas      |  1.89 |          6 |
     usage: 0
+- title: python
+  items:
+  - title: for
+    content: 'for x in range(1, 6): s += ", " +str(x)'
+    usage: 1
+  - title: print
+    content: print(s)
+    usage: 0
+  - title: var
+    content: s = str(0)
+    usage: 0
+- title: Vue
+  items:
+  - title: date filter
+    content: currentTime | formatTime("HH:mm:ss")
+    usage: 0
+- title: ansi
+  items:
+  - title: Clear
+    content: \033[0m
+    usage: 0
+  - title: RGB background
+    content: \033[48;2;<r>;<g>;<b>m
+    usage: 0
+  - title: RGB foreground
+    content: \033[38;2;<r>;<g>;<b>m
+    usage: 0
+  - title: Underline off
+    content: \033[24m
+    usage: 0
+  - title: Underline on
+    content: \033[4m
+    usage: 0
+- title: links
+  items:
+  - title: html color names
+    content: https://www.w3schools.com/colors/colors_names.asp
+    usage: 0
+- title: curl linkedIn
+  items:
+  - title: Token Introspection
+    content: 'curl --location --request POST ''https://www.linkedin.com/oauth/v2/introspectToken''
+      --header ''Content-Type: application/x-www-form-urlencoded'' --data-urlencode
+      ''client_id=77lgfbrkzacdyi'' --data-urlencode ''client_secret=KyzWQtXv05stDEoX''
+      --data-urlencode ''token=AQXDF0Qw2FYI1OY_aJEQ3Wg2NWzafbUiM6IWZuBkq2-YZdwzaBoWr4J8EHSz7rm_SY9qEGD6s1AHIrqBMEkXCcV5H5Ft81fq4Ce5M9q8vaRqoEegD_z9cP7aYAf-eYi98fgRgvFFg_Np9_wrdeTWSy7rT6SgXyPtsWNgAwgov0PQnVlfV3aQ2Kt_bGF2GTZh5KfQzzXvrSSJdkQHAU3d4VZ-QYXCAi5ebSR4liffIxmAHvBe6Msirm9ZSyZiYKMyznb1_G9rrY1lDe-vEs2_vOI_giplBKukYbhw1qt-zvd-z9eyg8OI_dbkx3bLW9tADQ-lhnbBQFxpkFnb05PRXnnmX-DE6w'''
+    usage: 1
